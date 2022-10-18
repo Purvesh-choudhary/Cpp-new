@@ -4,7 +4,10 @@ using namespace std;
 
 int main()
 {
-    int a;
-    
+    char name['x'];
+    int x;
+    cout<<"what is your name ?";
+    cin>>name;
+    cout<<"is your name "<<name;
     return 0;
 }
