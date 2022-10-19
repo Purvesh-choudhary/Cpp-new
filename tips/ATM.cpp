@@ -33,8 +33,19 @@ int main()
                                     goto Tran;
                  }
                  else               goto case1;     
+                 break;    
+        case 2 : case2: system("cls"); 
+                 cout<<"\t\t\tTRANSFER \n\n";
+                 cout<<"Enter Your value : ";
+                 cin>>m_temp;
+                 cout<<"Confirm? Y/N : ";
+                 cin>>confirm;
+                 if (confirm=='y')
+                 {
+                     money-=m_temp; goto Tran;
+                 }
+                 else               goto case2;     
                  break;
-
         case 3 : case3: system("cls"); 
                  cout<<"\t\t\tCASH WITHDRAWAL \n\n";
                  cout<<"Enter Your value : ";
@@ -47,7 +58,6 @@ int main()
                  }
                  else               goto case3;     
                  break;
-
         case 4 : case4: system("cls"); 
                  cout<<"\t\t\tBALANCE INQUIRY \n\n";
                  cout<<"TOTAL MONEY : "<<money;
