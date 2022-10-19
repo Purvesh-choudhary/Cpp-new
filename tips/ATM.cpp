@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int pinc=1234,pin,x=0,money=3000,m_temp,c_temp=1;
+    int pinc=1234,pin,x=0,money=3000,m_temp,c_temp=1,Temp_person=1000;
     char confirm;
     start: system("cls");
     cout<<"\n\n \t\t\tWELCOME TO GDP ATM \n\n";
@@ -23,7 +23,7 @@ int main()
         {
         case 1 : case1: system("cls"); 
                  cout<<"\t\t\tDEPOSIT \n\n";
-                 cout<<"Enter Your value : ";
+                 cout<<"Enter Your value : Rs. ";
                  cin>>m_temp;
                  cout<<"Confirm? Y/N : ";
                  cin>>confirm;
@@ -33,11 +33,24 @@ int main()
                                     goto Tran;
                  }
                  else               goto case1;     
+                 break;    
+        case 2 : case2: system("cls"); 
+                 cout<<"\t\t\tTRANSFER \n\n";
+                 cout<<"Enter Your value : Rs. ";
+                 cin>>m_temp;
+                 cout<<"Confirm? Y/N : ";
+                 cin>>confirm;
+                 if (confirm=='y')
+                 {
+                     money-=m_temp; 
+                     Temp_person+=m_temp;
+                                    goto Tran;
+                 }
+                 else               goto case2;     
                  break;
-
         case 3 : case3: system("cls"); 
                  cout<<"\t\t\tCASH WITHDRAWAL \n\n";
-                 cout<<"Enter Your value : ";
+                 cout<<"Enter Your value : Rs. ";
                  cin>>m_temp;
                  cout<<"Confirm? Y/N : ";
                  cin>>confirm;
@@ -47,10 +60,9 @@ int main()
                  }
                  else               goto case3;     
                  break;
-
         case 4 : case4: system("cls"); 
                  cout<<"\t\t\tBALANCE INQUIRY \n\n";
-                 cout<<"TOTAL MONEY : "<<money;
+                 cout<<"TOTAL MONEY : Rs. "<<money;
                  cout<<"\nBACK? Y/N : ";
                  cin>>confirm;
                  if (confirm=='y')  goto Tran;
