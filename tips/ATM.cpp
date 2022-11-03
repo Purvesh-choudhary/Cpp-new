@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int pinc=1234,pin,x=0,money=3000,m_temp,c_temp=1,Temp_person=1000;
+    int pinc=1234,pin,x=0,Balance=3000,m_temp,c_temp=1,Temp_person=1000;
     char confirm;
     start: system("cls");
     cout<<"\n\n \t\t\tWELCOME TO GDP ATM \n\n";
@@ -29,7 +29,7 @@ int main()
                  cin>>confirm;
                  if (confirm=='y')
                  {
-                     money=money+m_temp; 
+                     Balance+=m_temp; 
                                     goto Tran;
                  }
                  else               goto case1;     
@@ -42,7 +42,7 @@ int main()
                  cin>>confirm;
                  if (confirm=='y')
                  {
-                     money-=m_temp; 
+                     Balance-=m_temp; 
                      Temp_person+=m_temp;
                                     goto Tran;
                  }
@@ -56,13 +56,13 @@ int main()
                  cin>>confirm;
                  if (confirm=='y')
                  {
-                     money-=m_temp; goto Tran;
+                     Balance-=m_temp; goto Tran;
                  }
                  else               goto case3;     
                  break;
         case 4 : case4: system("cls"); 
                  cout<<"\t\t\tBALANCE INQUIRY \n\n";
-                 cout<<"TOTAL MONEY : Rs. "<<money;
+                 cout<<"TOTAL MONEY : Rs. "<<Balance;
                  cout<<"\nBACK? Y/N : ";
                  cin>>confirm;
                  if (confirm=='y')  goto Tran;
