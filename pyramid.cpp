@@ -9,8 +9,8 @@ int main()
     cin>>n;
     for(int i=1; i<=n; i++)
     {
-        for(a=i; a<n; a++)    cout<<"  ";
-        for(b=1; b<=x; b++)   cout<<" o";     
+        for(a=i; a<n; a++)    cout<<"  "; // for empty space
+        for(b=1; b<=x; b++)   cout<<" o"; // for actual pyramid    
         x=x+2;
         cout<<endl;
     }    
