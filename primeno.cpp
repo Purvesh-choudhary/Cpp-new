@@ -1,3 +1,5 @@
+//program to check the given no is prime or not
+
 #include<iostream>
 using namespace std;
 #include<conio.h>
