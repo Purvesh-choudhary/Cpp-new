@@ -22,12 +22,12 @@ class petshop : public zoo
     public :
     int cute()
     {
-        cout<<"1.Hamster\n2.Dog\n3.Cat";
+        cout<<"1.Hamster\n2.Husband\n3.Cat";
         return 0;
     }
     int Food()
     {
-        cout<<"1.Dog food\n2.Cat food";
+        cout<<"1.Husband food\n2.Cat food";
         return 0;
     }
 };
